@@ -650,29 +650,103 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* On mobile <= 768px: Hide desktop hero and render pixel-by-pixel exact mobile PDF design */
+  .desktop-hero-view {
+    display: none !important;
+  }
+
   .hero-section {
-    min-height: 520px;
-    background-size: cover;
-    background-position: 70% center;
-    background-image:
-      linear-gradient(to bottom,
-        rgba(235, 120, 63, 0.9) 0%,
-        rgba(235, 120, 63, 0.78) 45%,
-        rgba(235, 120, 63, 0.85) 100%),
-      url('/images/hero-girl.png');
-    padding: 40px 0;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    display: block !important;
+    overflow: hidden;
   }
 
-  .hero-content {
-    padding: 30px 0;
-    max-width: 100%;
+  .mobile-hero-wrapper {
+    display: block !important;
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
   }
 
-  .hero-headline,
-  .headline-line {
-    font-size: clamp(2.4rem, 8vw, 56px);
-    line-height: 1.15;
+  .mobile-hero-stage {
+    position: relative;
+    width: 100%;
+    max-width: 576px;
+    margin: 0 auto;
+    line-height: 0;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   }
+
+  .mobile-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    vertical-align: top;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Hotspot: Orange pill "Get Appointment ->" */
+  .mobile-hotspot-btn {
+    position: absolute;
+    left: 9.38%;
+    top: 44.34%;
+    width: 37.5%;
+    height: 4.0%;
+    border-radius: 999px;
+    z-index: 10;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .mobile-hotspot-btn:active {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(0.96);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+  }
+
+  /* Hotspots: 4 bottom features */
+  .mobile-hotspot-feature {
+    position: absolute;
+    bottom: 0;
+    height: 14.5%;
+    z-index: 10;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.15s ease;
+  }
+
+  .mobile-hotspot-feature.feat-1 { left: 0%; width: 25%; }
+  .mobile-hotspot-feature.feat-2 { left: 25%; width: 25%; }
+  .mobile-hotspot-feature.feat-3 { left: 50%; width: 25%; }
+  .mobile-hotspot-feature.feat-4 { left: 75%; width: 25%; }
+
+  .mobile-hotspot-feature:active {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  /* On mobile, retract site header when at top of hero so full PDF flyer (logo, heading, doctor) is 100% visible */
+  .site-header.mobile-hero-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Default: Mobile hero stage hidden on desktop screens */
+.mobile-hero-wrapper {
+  display: none;
 }
 
 .hero-headline .headline-line {

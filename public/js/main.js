@@ -462,13 +462,31 @@ document.addEventListener('DOMContentLoaded', () => {
     hideNavbar();
   });
 
+  // Mobile Hero Header visibility handler
+  function syncMobileHeroHeader() {
+    if (!siteHeader) return;
+    if (window.innerWidth <= 768) {
+      if (window.scrollY < 40) {
+        siteHeader.classList.add('mobile-hero-hidden');
+      } else {
+        siteHeader.classList.remove('mobile-hero-hidden');
+      }
+    } else {
+      siteHeader.classList.remove('mobile-hero-hidden');
+    }
+  }
+
   // Reveal when scrolling upwards significantly
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
+    syncMobileHeroHeader();
     if (isNavHidden && currentScrollY < lastScrollY - 15) {
       showNavbar();
     }
     lastScrollY = currentScrollY;
   }, { passive: true });
+
+  window.addEventListener('resize', syncMobileHeroHeader, { passive: true });
+  syncMobileHeroHeader();
 });
 

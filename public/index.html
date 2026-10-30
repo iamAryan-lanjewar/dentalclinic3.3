@@ -52,7 +52,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;600;700&family=Sacramento&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css?v=specialist_half_inch_v35">
+  <link rel="stylesheet" href="/css/style.css?v=mobile_hero_pdf_v37">
 
   <!-- ====================================================================
        SCHEMA.ORG STRUCTURED DATA (JSON-LD) - DENTAL CLINIC & MEDICAL BUSINESS
@@ -184,7 +184,8 @@
          SECTION 1: HERO (FORM 1)
          ================================================================== -->
     <header class="hero-section" id="hero" role="banner" aria-label="Clinic Welcome Header">
-      <div class="hero-grid">
+      <!-- Desktop Hero View (screens > 768px) -->
+      <div class="hero-grid desktop-hero-view">
         <div class="hero-content">
           <h1 class="hero-headline" aria-label="“your smile does really matter !”">
             <span class="headline-line"><span class="quote-mark-upper">“</span>your smile</span>
@@ -200,6 +201,28 @@
               </svg>
             </span>
           </a>
+        </div>
+      </div>
+
+      <!-- Mobile Hero View (Exact Pixel-by-Pixel Mirror of Given PDF Design for mobile screens <= 768px) -->
+      <div class="mobile-hero-wrapper" aria-label="Dental Clinic - your smile does really matter">
+        <div class="mobile-hero-stage">
+          <img 
+            src="/images/mobile-hero-design.jpg" 
+            alt="Dental Clinic - your smile does really matter ! Get Appointment" 
+            class="mobile-hero-img" 
+            width="576" 
+            height="1024"
+            fetchpriority="high"
+          >
+          <!-- Interactive Hotspot for "Get Appointment ->" Button -->
+          <a href="/appointment.html" class="mobile-hotspot-btn" aria-label="Get Appointment"></a>
+
+          <!-- Interactive Hotspots for Bottom 4 Features -->
+          <a href="#services" class="mobile-hotspot-feature feat-1" aria-label="Cosmetic Dentistry"></a>
+          <a href="#specialist" class="mobile-hotspot-feature feat-2" aria-label="Safe & Painless Care"></a>
+          <a href="#services" class="mobile-hotspot-feature feat-3" aria-label="Veneers & Crowns"></a>
+          <a href="#testimonials" class="mobile-hotspot-feature feat-4" aria-label="Long Lasting Results"></a>
         </div>
       </div>
     </header>
@@ -726,7 +749,7 @@
   <div id="toastNotice" class="toast-notice" role="status" aria-live="polite"></div>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=main_v12" defer></script>
+  <script src="/js/main.js?v=mobile_hero_pdf_v37" defer></script>
 </body>
 </html>
 
