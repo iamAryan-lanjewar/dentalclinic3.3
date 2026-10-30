@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://reallygreatsite.com/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://reallygreatsite.com/images/hero-girl.png</image:loc>
+      <image:title>Your Smile Does Really Matter - Dental Care</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reallygreatsite.com/images/doctor-dentist.jpg</image:loc>
+      <image:title>Our Specialist Dental Professional BDS MDS</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reallygreatsite.com/images/what-we-serve.jpg</image:loc>
+      <image:title>Comprehensive Dental Care and Treatments</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reallygreatsite.com/images/dental-chair.jpg</image:loc>
+      <image:title>Modern Dental Chair for Comfortable Treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reallygreatsite.com/images/dental-unit.jpg</image:loc>
+      <image:title>Modern Dental Unit and Instruments</image:title>
+    </image:image>
+  </url>
+</urlset>
+

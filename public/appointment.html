@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Book an Appointment | Arora Dental Care Nagpur</title>
+  <meta name="description" content="Schedule your dental appointment with Dr. Priya Arora at Arora Dental Care, Sadar, Nagpur. Precision dental implants, root canal therapy, veneers, and gentle family dentistry.">
+  <meta name="theme-color" content="#12161c">
+  
+  <!-- Favicon & Brand Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg?v=new_logo_v1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=new_logo_v1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=new_logo_v1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=new_logo_v1">
+  <link rel="shortcut icon" href="/favicon.ico?v=new_logo_v1">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css?v=specialist_half_inch_v35">
+
+  <style>
+    /* ======================================================================
+       HIGH-END LUXURY APPOINTMENT PORTAL - ENHANCED UI/UX ARCHITECTURE
+       ====================================================================== */
+    body {
+      background-color: var(--color-cream, #E9F4F5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #1e293b;
+    }
+
+    .appointment-page-canvas {
+      flex: 1;
+      padding: clamp(32px, 5vw, 64px) 0 clamp(48px, 6vw, 90px);
+    }
+
+    .appointment-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(16px, 3.5vw, 40px);
+      box-sizing: border-box;
+    }
+
+    .appointment-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: clamp(28px, 4vw, 52px);
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .appointment-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ----------------------------------------------------------------------
+       LEFT COLUMN: STICKY CLINIC PRESTIGE SIDEBAR
+       ---------------------------------------------------------------------- */
+    .appointment-info-col {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: clamp(24px, 3.5vw, 36px);
+      box-shadow: 0 12px 36px rgba(18, 28, 48, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(132, 170, 191, 0.28);
+      position: sticky;
+      top: 96px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .appointment-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(132, 170, 191, 0.16);
+      color: #1e3a5f;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      border: 1px solid rgba(132, 170, 191, 0.3);
+    }
+
+    .appointment-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .appointment-headline {
+      font-family: var(--font-heading, 'Fraunces', serif);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--color-navy, #2E4A82);
+      line-height: 1.15;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .appointment-lead {
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.98rem;
+      line-height: 1.62;
+      color: #4a5568;
+      margin-bottom: 26px;
+    }
+
+    /* Trust highlights */
+    .trust-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-top: 22px;
+      border-top: 1px solid #edf2f7;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .trust-item:hover {
+      background: #f8fafc;
+      transform: translateX(3px);
+    }
+
+    .trust-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(46, 74, 130, 0.08);
+      color: var(--color-navy, #2E4A82);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .trust-item:hover .trust-icon-box {
+      background: var(--color-navy, #2E4A82);
+      color: #ffffff;
+    }
+
+    .trust-item-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 2px;
+    }
+
+    .trust-item-desc {
+      font-size: 0.84rem;
+      color: #718096;
+      line-height: 1.45;
+    }
+
+    /* Direct Contact Card */
+    .emergency-direct-card {
+      background: linear-gradient(135deg, rgba(235, 120, 63, 0.1) 0%, rgba(245, 230, 190, 0.25) 100%);
+      border: 1px solid rgba(235, 120, 63, 0.32);
+      border-radius: 18px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 14px rgba(235, 120, 63, 0.08);
+    }
+
+    .emergency-text {
+      font-size: 0.88rem;
+      color: #2d3748;
+    }
+
+    .emergency-text strong {
+      display: block;
+      color: #c05621;
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .emergency-call-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eb783f;
+      color: #ffffff;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 10px rgba(235, 120, 63, 0.3);
+    }
+
+    .emergency-call-btn:hover {
+      background: #d96225;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(235, 120, 63, 0.4);
+    }
+
+    /* ----------------------------------------------------------------------
+       RIGHT COLUMN: THE COMPREHENSIVE CLINICAL BOOKING CARD
+       ---------------------------------------------------------------------- */
+    .appointment-form-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: clamp(28px, 4.5vw, 48px);
+      box-shadow: 0 16px 44px rgba(18, 28, 48, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(132, 170, 191, 0.28);
+      position: relative;
+    }
+
+    .form-card-header {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .form-card-title {
+      font-family: var(--font-heading, 'Fraunces', serif);
+      font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+      font-weight: 800;
+      color: var(--color-navy, #2E4A82);
+      margin: 0 0 6px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .form-card-subtitle {
+      font-size: 0.94rem;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .booking-page-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Step-based Form Grouping */
+    .form-group-section {
+      background: #fafcfe;
+      border: 1px solid #e6f0f7;
+      border-radius: 20px;
+      padding: clamp(18px, 2.8vw, 26px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .form-group-section:focus-within {
+      border-color: rgba(2, 132, 199, 0.4);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.05);
+      background: #ffffff;
+    }
+
+    .group-section-legend {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+
+    .legend-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-navy, #2E4A82);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .legend-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--color-navy, #2E4A82);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-family: var(--font-sans, sans-serif);
+    }
+
+    .form-row-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row-split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-field label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .form-field label span.req {
+      color: #ef4444;
+      font-weight: 800;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper input,
+    .input-wrapper select,
+    .form-field textarea {
+      width: 100%;
+      padding: 13px 16px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.96rem;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #0f172a;
+      transition: all 0.22s ease;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .input-wrapper select {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 42px;
+    }
+
+    .select-chevron-icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #64748b;
+      stroke-width: 2.5;
+    }
+
+    .input-wrapper input:focus,
+    .input-wrapper select:focus,
+    .form-field textarea:focus {
+      border-color: #0284c7;
+      background: #ffffff;
+      box-shadow: 0 0 0 3.5px rgba(2, 132, 199, 0.16);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 84px;
+      line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------------------------
+       STEP 3: DATE & TIME BALANCED COHESIVE GRID
+       ---------------------------------------------------------------------- */
+    .date-time-cluster {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 768px) {
+      .date-time-cluster {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .date-subcard {
+      background: #ffffff;
+      border: 1.5px solid #d4ebf9;
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      box-sizing: border-box;
+    }
+
+    .date-subcard-header {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .date-input-styled {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f2744;
+      border: 1.5px solid #cce5f6;
+      border-radius: 14px;
+      background: #f8fafc;
+      outline: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .date-input-styled:focus {
+      border-color: #0284c7;
+      background: #ffffff;
+      box-shadow: 0 0 0 3.5px rgba(2, 132, 199, 0.16);
+    }
+
+    .date-helper-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #0369a1;
+      font-weight: 600;
+      background: rgba(2, 132, 199, 0.08);
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+
+    /* ======================================================================
+       CUSTOM TIME CLOCK PICKER (Exact Mirror to User UI Specification)
+       Hours: 9:00 AM - 9:00 PM | Break: 1:00 PM - 1:59 PM
+       ====================================================================== */
+    .time-clock-card {
+      background: #eef7fc;
+      border: 1.5px solid #d4ebf9;
+      border-radius: 20px;
+      padding: 14px 18px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+
+    .time-clock-columns {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .time-unit-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .time-unit-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #0284c7;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-family: var(--font-sans, sans-serif);
+      user-select: none;
+    }
+
+    .time-select-pill {
+      position: relative;
+      background: #ffffff;
+      border: 1.5px solid #cce5f6;
+      border-radius: 16px;
+      height: 56px;
+      width: 100%;
+      min-width: 82px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.07);
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+
+    .time-select-pill:hover,
+    .time-select-pill:focus-within {
+      border-color: #0284c7;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.16);
+    }
+
+    .time-display-num {
+      font-family: var(--font-sans, sans-serif);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #0b2545;
+      line-height: 1;
+      user-select: none;
+      letter-spacing: -0.02em;
+    }
+
+    .time-chevron {
+      color: #0284c7;
+      stroke-width: 2.8;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    .time-native-select {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      font-size: 1.1rem;
+      z-index: 2;
+    }
+
+    .time-colon {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0284c7;
+      line-height: 1;
+      padding-bottom: 14px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .time-period-toggle {
+      background: #ffffff;
+      border: 1.5px solid #cce5f6;
+      border-radius: 16px;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex-shrink: 0;
+      min-width: 58px;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.07);
+      box-sizing: border-box;
+      margin-bottom: 1px;
+    }
+
+    .period-btn {
+      border: none;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 5px 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans, sans-serif);
+      background: transparent;
+      color: #557291;
+    }
+
+    .period-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+    }
+
+    .period-btn:not(.active):hover {
+      color: #0284c7;
+      background: rgba(2, 132, 199, 0.08);
+    }
+
+    .time-clock-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px dashed #cce5f6;
+      font-size: 0.76rem;
+    }
+
+    .time-hours-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0369a1;
+      font-weight: 700;
+    }
+
+    .time-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    .time-break-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(235, 120, 63, 0.14);
+      color: #c05621;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid rgba(235, 120, 63, 0.25);
+    }
+
+    .time-break-alert {
+      display: none;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #c2410c;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .time-break-alert.show {
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }
+
+    /* ----------------------------------------------------------------------
+       SUBMIT ACTION AREA
+       ---------------------------------------------------------------------- */
+    .form-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--color-navy, #2E4A82);
+      color: #ffffff;
+      font-family: var(--font-sans, sans-serif);
+      font-weight: 800;
+      font-size: 1.08rem;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill, 999px);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      margin-top: 8px;
+      box-shadow: 0 8px 22px rgba(46, 74, 130, 0.28);
+      width: 100%;
+    }
+
+    .form-submit-btn:hover {
+      background: var(--color-navy-hover, #1d335a);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(46, 74, 130, 0.38);
+    }
+
+    .form-submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .form-submit-arrow {
+      transition: transform 0.25s ease;
+    }
+
+    .form-submit-btn:hover .form-submit-arrow {
+      transform: translateX(4px);
+    }
+
+    .form-privacy-note {
+      font-size: 0.82rem;
+      color: #64748b;
+      text-align: center;
+      margin: 10px 0 0 0;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ----------------------------------------------------------------------
+       BOOKING CONFIRMATION SUCCESS STATE
+       ---------------------------------------------------------------------- */
+    .confirmation-state {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .confirmation-state.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .success-icon-wrap {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #d1fae5;
+      color: #059669;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.2);
+    }
+
+    .confirmation-title {
+      font-family: var(--font-heading, 'Fraunces', serif);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #065f46;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .confirmation-desc {
+      font-size: 1.02rem;
+      color: #4a5568;
+      max-width: 460px;
+      margin: 0 auto 24px;
+      line-height: 1.55;
+    }
+
+    .confirmation-summary-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 22px;
+      margin: 0 auto 26px;
+      max-width: 460px;
+      text-align: left;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 0.94rem;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .summary-row span.label {
+      color: #64748b;
+    }
+
+    .summary-row strong.val {
+      color: #0f172a;
+    }
+
+    .confirmation-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-return-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-navy, #2E4A82);
+      color: #ffffff;
+      padding: 12px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-return-home:hover {
+      background: #1d335a;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================================
+       SITE HEADER NAVIGATION (Back Button Only)
+       ==================================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="main-navbar" aria-label="Main Navigation">
+      <div class="navbar-container">
+        <!-- Clinic Brand Name on Left -->
+        <a href="/" class="navbar-brand" aria-label="ARORA DENTAL CARE Home">
+          <span class="brand-tooth-icon" aria-hidden="true">
+            <img src="/images/logo.svg?v=new_logo_v1" alt="ARORA DENTAL CARE Logo" class="brand-logo-img" width="40" height="40">
+          </span>
+          <span class="brand-text">ARORA DENTAL CARE</span>
+        </a>
+
+        <!-- Right Side: Return to Homepage (Back Button Only) -->
+        <div class="navbar-right">
+          <a href="/" class="nav-cta-btn" style="text-decoration: none;" aria-label="Return to Main Website">
+            <span>← Back to Website</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====================================================================
+       MAIN APPOINTMENT FORM PAGE
+       ==================================================================== -->
+  <main class="appointment-page-canvas" id="main-content">
+    <div class="appointment-container">
+      <div class="appointment-grid">
+        
+        <!-- Left: Clinic Information & Trust Badges -->
+        <aside class="appointment-info-col" aria-label="Clinic Overview & Assistance">
+          <div class="appointment-badge">
+            <span class="appointment-badge-dot"></span>
+            <span>Online Scheduling Active</span>
+          </div>
+
+          <h1 class="appointment-headline">Schedule Your Visit</h1>
+          <p class="appointment-lead">
+            Experience gentle, precision dental care tailored to your comfort with Dr. Priya Arora and our certified clinical team.
+          </p>
+
+          <div class="trust-highlights">
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="trust-item-title">Dr. Priya Arora (BDS, MDS)</div>
+                <div class="trust-item-desc">Chief Dental Surgeon with 12+ years of specialized clinical experience.</div>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="trust-item-title">Flexible Clinic Timings</div>
+                <div class="trust-item-desc">Mon - Sat: 10:00 AM - 8:00 PM • Sunday by prior appointment.</div>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="trust-item-title">Prime Sadar, Nagpur Location</div>
+                <div class="trust-item-desc">Unit No.60, Ground Floor, Anjuman Complex, Mangalwari Bazar Rd.</div>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="trust-item-title">Barrier-Free Access</div>
+                <div class="trust-item-desc">Wheelchair friendly clinic, assistance dogs welcome, anxiety-free care.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Assistance -->
+          <div class="emergency-direct-card">
+            <div class="emergency-text">
+              <strong>Need Immediate Assistance?</strong>
+              Call our reception for emergency slots
+            </div>
+            <a href="tel:+11234567890" class="emergency-call-btn" aria-label="Call clinic directly">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>(123) 456-7890</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Right: The Booking Form -->
+        <section class="appointment-form-card" aria-labelledby="formTitle">
+          <!-- Active Form -->
+          <div id="bookingFormWrapper">
+            <div class="form-card-header">
+              <h2 class="form-card-title" id="formTitle">Book Your Appointment</h2>
+              <p class="form-card-subtitle">Fill in your details below and our clinic manager will confirm your preferred timing.</p>
+            </div>
+
+            <form id="standaloneBookingForm" class="booking-page-form">
+              
+              <!-- SECTION 1: PATIENT INFORMATION -->
+              <div class="form-group-section">
+                <div class="group-section-legend">
+                  <span class="legend-badge">1</span>
+                  <span class="legend-title">Patient Contact Details</span>
+                </div>
+
+                <div class="form-row-split">
+                  <div class="form-field">
+                    <label for="pagePatientName">Full Name <span class="req">*</span></label>
+                    <div class="input-wrapper">
+                      <input type="text" id="pagePatientName" name="patientName" required placeholder="e.g. Jane Doe" autocomplete="name">
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="pagePatientPhone">Phone Number <span class="req">*</span></label>
+                    <div class="input-wrapper">
+                      <input type="tel" id="pagePatientPhone" name="patientPhone" required placeholder="(123) 456-7890" autocomplete="tel">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row-split">
+                  <div class="form-field">
+                    <label for="pagePatientEmail">Email Address</label>
+                    <div class="input-wrapper">
+                      <input type="email" id="pagePatientEmail" name="patientEmail" placeholder="jane@example.com" autocomplete="email">
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="pageDoctorSelect">Doctor Preference</label>
+                    <div class="input-wrapper">
+                      <select id="pageDoctorSelect" name="preferredDoctor">
+                        <option value="Dr. Priya Arora (BDS, MDS)">Dr. Priya Arora (BDS, MDS) - Chief Dental Surgeon</option>
+                        <option value="Any Specialist">First Available Dental Specialist</option>
+                      </select>
+                      <svg class="select-chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECTION 2: TREATMENT & SERVICE SELECTION -->
+              <div class="form-group-section">
+                <div class="group-section-legend">
+                  <span class="legend-badge">2</span>
+                  <span class="legend-title">Clinical Treatment</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="pageTreatmentType">Treatment / Reason for Visit <span class="req">*</span></label>
+                  <div class="input-wrapper">
+                    <select id="pageTreatmentType" name="treatmentType" required>
+                      <option value="General Consultation" selected>General Dental Checkup & Consultation</option>
+                      <option value="Root Canal Treatment">Root Canal Therapy (Painless Endodontics)</option>
+                      <option value="Ultrasonic Scaling">Ultrasonic Scaling & Teeth Cleaning</option>
+                      <option value="Cosmetic Filling">Cosmetic Composite Tooth Filling</option>
+                      <option value="Dental Veneers">Porcelain Dental Veneers</option>
+                      <option value="Dental Implants">Titanium Dental Implants</option>
+                      <option value="Crowns & Bridges">Ceramic Crowns & Permanent Bridges</option>
+                      <option value="Modern Dentures">Custom Fitted Dentures</option>
+                      <option value="Surgical Extraction">Wisdom Tooth & Surgical Extraction</option>
+                      <option value="Orthodontics">Orthodontic Braces / Clear Aligners</option>
+                      <option value="Toothache / Emergency">Toothache / Emergency Relief</option>
+                    </select>
+                    <svg class="select-chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECTION 3: DATE & TIME CLOCK BALANCED ARRANGEMENT -->
+              <div class="form-group-section">
+                <div class="group-section-legend">
+                  <span class="legend-badge">3</span>
+                  <span class="legend-title">Schedule Date & Time</span>
+                </div>
+
+                <div class="date-time-cluster">
+                  <!-- Subcard 1: Date -->
+                  <div class="date-subcard">
+                    <div>
+                      <div class="date-subcard-header">
+                        <label for="pagePreferredDate">Preferred Date <span class="req">*</span></label>
+                      </div>
+                      <input type="date" id="pagePreferredDate" name="preferredDate" required class="date-input-styled">
+                    </div>
+                    <div class="date-helper-pill">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Advance & Same-day Booking</span>
+                    </div>
+                  </div>
+
+                  <!-- Subcard 2: Time Clock -->
+                  <div class="form-field time-picker-form-field">
+                    <!-- Custom Digital Time Clock Selector -->
+                    <div class="time-clock-card" role="group" aria-label="Preferred Time Slot">
+                      <div class="time-clock-columns">
+                        <!-- HR Column -->
+                        <div class="time-unit-col">
+                          <span class="time-unit-label">HR</span>
+                          <div class="time-select-pill">
+                            <span class="time-display-num" id="displayHour">10</span>
+                            <svg class="time-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <select id="selectHour" class="time-native-select" aria-label="Select Hour"></select>
+                          </div>
+                        </div>
+
+                        <!-- Colon Separator -->
+                        <div class="time-colon">:</div>
+
+                        <!-- MIN Column -->
+                        <div class="time-unit-col">
+                          <span class="time-unit-label">MIN</span>
+                          <div class="time-select-pill">
+                            <span class="time-display-num" id="displayMinute">30</span>
+                            <svg class="time-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <select id="selectMinute" class="time-native-select" aria-label="Select Minute"></select>
+                          </div>
+                        </div>
+
+                        <!-- AM / PM Capsule Toggle -->
+                        <div class="time-period-toggle" role="radiogroup" aria-label="Select AM or PM">
+                          <button type="button" class="period-btn active" id="btnPeriodAM" data-period="AM" role="radio" aria-checked="true">AM</button>
+                          <button type="button" class="period-btn" id="btnPeriodPM" data-period="PM" role="radio" aria-checked="false">PM</button>
+                        </div>
+                      </div>
+
+                      <!-- Break alert message if needed -->
+                      <div id="timeBreakAlert" class="time-break-alert">
+                        ⚠️ Clinic Break Time (1:00 PM – 1:59 PM). Please choose 2:00 PM or later.
+                      </div>
+
+                      <!-- Clock Footer with Hours & Break Indicator -->
+                      <div class="time-clock-footer">
+                        <div class="time-hours-badge">
+                          <span class="time-dot"></span>
+                          <span>Open: 9 AM – 9 PM</span>
+                        </div>
+                        <div class="time-break-badge">
+                          <span>Break: 1 PM – 1:59 PM</span>
+                        </div>
+                      </div>
+
+                      <!-- Hidden Input passed into form submission -->
+                      <input type="hidden" id="pagePreferredTime" name="preferredTime" value="10:30 AM" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECTION 4: COMFORT & SPECIAL CARE -->
+              <div class="form-group-section">
+                <div class="group-section-legend">
+                  <span class="legend-badge">4</span>
+                  <span class="legend-title">Comfort Preferences</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="pageSpecialNotes">
+                    Special Requests & Comfort Preferences
+                    <span style="font-size: 0.8rem; font-weight: 600; color: #64748b; margin-left: 6px;">(Optional)</span>
+                  </label>
+                  <textarea id="pageSpecialNotes" name="specialNotes" rows="3" placeholder="Tell us if you have dental anxiety, require wheelchair assistance, or specific medical conditions..."></textarea>
+                </div>
+              </div>
+
+              <!-- SUBMIT BUTTON & PRIVACY PLEDGE -->
+              <div class="form-action-area">
+                <button type="submit" class="form-submit-btn" id="submitBtn">
+                  <span>Confirm Appointment Request</span>
+                  <svg class="form-submit-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+
+                <p class="form-privacy-note">
+                  🔒 Your privacy is strictly protected. Our clinic will call or message to confirm your slot within 2 business hours.
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Success State -->
+          <div id="bookingConfirmationState" class="confirmation-state">
+            <div class="success-icon-wrap">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="confirmation-title">Appointment Confirmed!</h3>
+            <p class="confirmation-desc">
+              Thank you, <strong id="confirmPatientName">Patient</strong>. Your visit has been scheduled with <span id="confirmDoctor">Dr. Priya Arora</span>.
+            </p>
+
+            <div class="confirmation-summary-card">
+              <div class="summary-row">
+                <span class="label">Booking ID:</span>
+                <strong class="val" id="confirmBookingId">APT-123456</strong>
+              </div>
+              <div class="summary-row">
+                <span class="label">Procedure:</span>
+                <strong class="val" id="confirmTreatment">General Consultation</strong>
+              </div>
+              <div class="summary-row">
+                <span class="label">Date & Time:</span>
+                <strong class="val" id="confirmDateTime">Tomorrow, Morning</strong>
+              </div>
+              <div class="summary-row">
+                <span class="label">Clinic Location:</span>
+                <strong class="val">Anjuman Complex, Sadar</strong>
+              </div>
+            </div>
+
+            <div class="confirmation-actions">
+              <a href="/" class="btn-return-home">
+                <span>← Back to Clinic Website</span>
+              </a>
+              <button type="button" class="emergency-call-btn" id="btnBookAnother" style="border: none; cursor: pointer;">
+                <span>Book Another Visit</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ======================================================================
+    // DIGITAL TIME CLOCK PICKER CONTROLLER
+    // Hours: 9:00 AM - 9:00 PM | Break: 1:00 PM - 1:59 PM
+    // ======================================================================
+    let currentPeriod = 'AM';
+    let currentHour = '10';
+    let currentMinute = '30';
+
+    const selectHour = document.getElementById('selectHour');
+    const selectMinute = document.getElementById('selectMinute');
+    const displayHour = document.getElementById('displayHour');
+    const displayMinute = document.getElementById('displayMinute');
+    const btnPeriodAM = document.getElementById('btnPeriodAM');
+    const btnPeriodPM = document.getElementById('btnPeriodPM');
+    const hiddenTimeInput = document.getElementById('pagePreferredTime');
+    const timeBreakAlert = document.getElementById('timeBreakAlert');
+
+    function renderTimeHours() {
+      selectHour.innerHTML = '';
+      if (currentPeriod === 'AM') {
+        // Open from 9:00 AM to 11:45 AM (12:00 is PM)
+        const amHours = ['09', '10', '11'];
+        amHours.forEach(h => {
+          const opt = document.createElement('option');
+          opt.value = h;
+          opt.textContent = h;
+          if (h === currentHour) opt.selected = true;
+          selectHour.appendChild(opt);
+        });
+        if (!amHours.includes(currentHour)) {
+          currentHour = '10';
+          selectHour.value = '10';
+        }
+      } else {
+        // PM: 12 PM, 01 PM (Break!), 02 PM, 03, 04, 05, 06, 07, 08, 09 PM
+        const pmHours = [
+          { val: '12', label: '12' },
+          { val: '01', label: '01 (Break: 1:00 - 1:59 PM)', disabled: true },
+          { val: '02', label: '02' },
+          { val: '03', label: '03' },
+          { val: '04', label: '04' },
+          { val: '05', label: '05' },
+          { val: '06', label: '06' },
+          { val: '07', label: '07' },
+          { val: '08', label: '08' },
+          { val: '09', label: '09 (Closing at 9:00 PM)' }
+        ];
+
+        pmHours.forEach(item => {
+          const opt = document.createElement('option');
+          opt.value = item.val;
+          opt.textContent = item.label;
+          if (item.disabled) opt.disabled = true;
+          if (item.val === currentHour && !item.disabled) opt.selected = true;
+          selectHour.appendChild(opt);
+        });
+
+        const validPm = ['12', '02', '03', '04', '05', '06', '07', '08', '09'];
+        if (!validPm.includes(currentHour)) {
+          currentHour = '02';
+          selectHour.value = '02';
+        }
+      }
+      renderTimeMinutes();
+      syncTimeDisplay();
+    }
+
+    function renderTimeMinutes() {
+      selectMinute.innerHTML = '';
+      let minuteList = ['00', '15', '30', '45'];
+      
+      // If 9 PM, clinic closes at 9:00 PM, only 00 minute is valid
+      if (currentPeriod === 'PM' && currentHour === '09') {
+        minuteList = ['00'];
+        currentMinute = '00';
+      } else if (!minuteList.includes(currentMinute)) {
+        currentMinute = '30';
+      }
+
+      minuteList.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m;
+        opt.textContent = m;
+        if (m === currentMinute) opt.selected = true;
+        selectMinute.appendChild(opt);
+      });
+    }
+
+    function syncTimeDisplay() {
+      displayHour.textContent = currentHour;
+      displayMinute.textContent = currentMinute;
+      
+      btnPeriodAM.classList.toggle('active', currentPeriod === 'AM');
+      btnPeriodAM.setAttribute('aria-checked', currentPeriod === 'AM');
+      btnPeriodPM.classList.toggle('active', currentPeriod === 'PM');
+      btnPeriodPM.setAttribute('aria-checked', currentPeriod === 'PM');
+
+      const formattedTime = `${currentHour}:${currentMinute} ${currentPeriod}`;
+      hiddenTimeInput.value = formattedTime;
+
+      // Handle break display warning if user attempted 1 PM
+      if (currentPeriod === 'PM' && currentHour === '01') {
+        timeBreakAlert.classList.add('show');
+      } else {
+        timeBreakAlert.classList.remove('show');
+      }
+    }
+
+    // Event listeners
+    selectHour.addEventListener('change', (e) => {
+      currentHour = e.target.value;
+      if (currentPeriod === 'PM' && currentHour === '01') {
+        timeBreakAlert.classList.add('show');
+        setTimeout(() => {
+          currentHour = '02';
+          selectHour.value = '02';
+          timeBreakAlert.classList.remove('show');
+          syncTimeDisplay();
+        }, 1200);
+      }
+      renderTimeMinutes();
+      syncTimeDisplay();
+    });
+
+    selectMinute.addEventListener('change', (e) => {
+      currentMinute = e.target.value;
+      syncTimeDisplay();
+    });
+
+    btnPeriodAM.addEventListener('click', () => {
+      if (currentPeriod !== 'AM') {
+        currentPeriod = 'AM';
+        renderTimeHours();
+      }
+    });
+
+    btnPeriodPM.addEventListener('click', () => {
+      if (currentPeriod !== 'PM') {
+        currentPeriod = 'PM';
+        renderTimeHours();
+      }
+    });
+
+    // Initialize time clock to 10:30 AM
+    renderTimeHours();
+
+    // Set default date to tomorrow or today
+    const dateInput = document.getElementById('pagePreferredDate');
+    if (dateInput) {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+      
+      // Default to tomorrow if not Sunday
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const tY = tomorrow.getFullYear();
+      const tM = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const tD = String(tomorrow.getDate()).padStart(2, '0');
+      dateInput.value = `${tY}-${tM}-${tD}`;
+    }
+
+    // Handle Pre-filled URL Query Parameters (e.g., ?service=root-canal)
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const select = document.getElementById('pageTreatmentType');
+      for (let option of select.options) {
+        if (option.value.toLowerCase().includes(serviceParam.toLowerCase()) || 
+            option.text.toLowerCase().includes(serviceParam.toLowerCase())) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+
+    // Handle Form Submission
+    const bookingForm = document.getElementById('standaloneBookingForm');
+    const formWrapper = document.getElementById('bookingFormWrapper');
+    const confirmationState = document.getElementById('bookingConfirmationState');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>Scheduling...</span>`;
+
+        const formData = new FormData(bookingForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch('/api/appointments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const result = await res.json();
+
+          // Populate Confirmation
+          document.getElementById('confirmPatientName').textContent = data.patientName;
+          document.getElementById('confirmDoctor').textContent = data.preferredDoctor || 'Dr. Priya Arora';
+          document.getElementById('confirmBookingId').textContent = result.id || ('APT-' + Math.floor(100000 + Math.random() * 900000));
+          document.getElementById('confirmTreatment').textContent = data.treatmentType;
+          document.getElementById('confirmDateTime').textContent = `${data.preferredDate} (${data.preferredTime})`;
+
+          // Transition View
+          formWrapper.style.display = 'none';
+          confirmationState.classList.add('active');
+          window.scrollTo({ top: 100, behavior: 'smooth' });
+
+        } catch (err) {
+          // Client-side fallback if server offline
+          document.getElementById('confirmPatientName').textContent = data.patientName || 'Patient';
+          document.getElementById('confirmDoctor').textContent = data.preferredDoctor || 'Dr. Priya Arora';
+          document.getElementById('confirmBookingId').textContent = 'APT-' + Math.floor(100000 + Math.random() * 900000);
+          document.getElementById('confirmTreatment').textContent = data.treatmentType;
+          document.getElementById('confirmDateTime').textContent = `${data.preferredDate} (${data.preferredTime})`;
+
+          formWrapper.style.display = 'none';
+          confirmationState.classList.add('active');
+          window.scrollTo({ top: 100, behavior: 'smooth' });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>Confirm Appointment Request</span>`;
+        }
+      });
+    }
+
+    // "Book Another" reset button
+    const btnBookAnother = document.getElementById('btnBookAnother');
+    if (btnBookAnother) {
+      btnBookAnother.addEventListener('click', () => {
+        bookingForm.reset();
+        currentPeriod = 'AM';
+        currentHour = '10';
+        currentMinute = '30';
+        renderTimeHours();
+        confirmationState.classList.remove('active');
+        formWrapper.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

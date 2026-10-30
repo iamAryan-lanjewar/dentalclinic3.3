@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Subtle high-end clinic lighting gradient matching the user's badge -->
+    <linearGradient id="clinicBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93B7C8"/>
+      <stop offset="50%" stop-color="#84AABF"/>
+      <stop offset="100%" stop-color="#739CB1"/>
+    </linearGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- Circular Badge -->
+  <circle cx="50" cy="50" r="48" fill="url(#clinicBadgeGrad)"/>
+  
+  <!-- Stylized White Tooth Emblem -->
+  <path d="M 50 25.5
+           C 44.5 25.5 39.5 22.2 35 22.2
+           C 27.5 22.2 23 27 23 35
+           C 23 44 26.5 49 28 57
+           C 29.5 65 31 73 34 77.5
+           C 35.5 79.5 38.5 79 39.8 76.5
+           C 42 72 44.5 64 45.8 58.5
+           C 46.8 54.5 53.2 54.5 54.2 58.5
+           C 55.5 64 58 72 60.2 76.5
+           C 61.5 79 64.5 79.5 66 77.5
+           C 69 73 70.5 65 72 57
+           C 73.5 49 77 44 77 35
+           C 77 27 72.5 22.2 65 22.2
+           C 60.5 22.2 55.5 25.5 50 25.5 Z"
+        fill="#FFFFFF"
+        filter="url(#softGlow)"/>
+</svg>
+

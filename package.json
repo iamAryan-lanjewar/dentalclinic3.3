@@ -1,0 +1,25 @@
+{
+  "name": "dentalclinic2.0",
+  "version": "1.0.0",
+  "description": "Pixel-Perfect, Production-Ready Dental Clinic Web Application with High-End UX & SEO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "dental-clinic",
+    "dentistry",
+    "pixel-perfect",
+    "seo",
+    "express",
+    "node"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0"
+  }
+}
