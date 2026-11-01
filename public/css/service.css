@@ -813,7 +813,7 @@ body {
 
 @media (max-width: 768px) {
   .service-canvas {
-    padding-bottom: 85px !important;
+    padding-bottom: 89px !important;
   }
 
   .mobile-bottom-nav {
@@ -823,7 +823,7 @@ body {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    height: 60px !important;
+    height: 64px !important;
     background: rgba(14, 23, 42, 0.94) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
@@ -895,7 +895,8 @@ body {
 
   .mobile-bottom-nav-item.nav-book-cta .nav-book-pill {
     background: linear-gradient(135deg, #eb783f 0%, #d35400 100%) !important;
-    padding: 3px 12px !important;
+    padding: 5px 14px !important;
+    min-height: 32px !important;
     border-radius: 999px !important;
     display: flex !important;
     align-items: center !important;
