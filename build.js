@@ -38,3 +38,4 @@ targetDirs.forEach((dirName) => {
 });
 
 console.log('✓ Build completed successfully for Hostinger deployment.');
+
