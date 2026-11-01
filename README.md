@@ -45,3 +45,4 @@ The application will be live at `http://localhost:3000`.
 ## License
 
 ISC License.
+

@@ -1,0 +1,916 @@
+/**
+ * DENTAL CLINIC 2.0 - DEDICATED SERVICES PAGE STYLESHEET
+ * Optimized for PC Full Width (vw) & Enhanced Headline Font Weights
+ * Strictly preserves mobile UI/UX and isolates changes to PC UI/UX
+ */
+
+/* ==========================================================================
+   FONT FACES
+   ========================================================================== */
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('/fonts/AlexBrush-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lustria';
+  src: url('/fonts/Lustria-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Times New Roman MT Condensed';
+  src: url('/fonts/Times-New-Roman-MT-Condensed-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo';
+  src: url('/fonts/Arimo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo';
+  src: url('/fonts/Arimo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   CSS VARIABLES & DESIGN TOKENS
+   ========================================================================== */
+:root {
+  --page-bg: #d9d9d9;
+  --card-bg: #f4f1ec;
+  --script-red: #ff3131;
+  --serif-dark: #111111;
+  --watermark-color: #9aa2a8;
+  --btn-teal: #63918b;
+  --btn-orange: #ff751f;
+  --btn-orange-hover: #ff8533;
+  --text-dark: #1b1c1e;
+  --body-font: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --serif-font: 'Lustria', serif;
+  --title-serif: 'Times New Roman MT Condensed', 'Lustria', serif;
+  --script-font: 'Alex Brush', cursive;
+}
+
+/* ==========================================================================
+   PAGE BASE (PC FULL WIDTH VW OPTIMIZATION)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--page-bg);
+  color: var(--text-dark);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.service-page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--page-bg);
+}
+
+/* PC Full Width: occupies full page width (vw) */
+.service-canvas {
+  width: 100%;
+  max-width: 100%;
+  /* Fully occupied viewport width on PC */
+  background-color: var(--page-bg);
+  padding: 28px clamp(24px, 4vw, 72px) 56px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   TOP BAR (BACK BUTTON)
+   ========================================================================== */
+.service-header-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.service-back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--btn-teal);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: lowercase;
+  padding: 9px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 3px 10px rgba(99, 145, 139, 0.32);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.service-back-link:hover {
+  background-color: #557e78;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 145, 139, 0.45);
+}
+
+.service-back-link:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   HERO / HEADLINE BLOCK (NO COLLISION, INCREASED WATERMARK WEIGHT, LOW TRANSPARENCY)
+   ========================================================================== */
+.service-headline-block {
+  width: 100%;
+  margin-bottom: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Watermark: Bold font weight with reduced color alpha / soft opacity */
+.watermark-headline {
+  font-family: var(--body-font);
+  font-weight: 900;
+  /* Bold weight maintained */
+  -webkit-text-stroke: 1.2px #4a545e;
+  paint-order: stroke fill;
+  font-size: clamp(28px, 4.8vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a545e;
+  opacity: 0.45;
+  /* Reduced color alpha / opacity */
+  line-height: 1.15;
+  margin: 0;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Main headline: bit push up so the top loop of 'M' in Modern touches 'Transforming' watermark */
+.main-headline {
+  margin: -8px 0 0 0;
+  line-height: 1.05;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: clamp(10px, 1.4vw, 22px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Script "Modern": Pure cursive script type */
+.script-modern {
+  font-family: var(--script-font);
+  font-size: clamp(58px, 8.8vw, 114px);
+  color: var(--script-red);
+  font-weight: 400;
+  -webkit-text-stroke: 0.5px var(--script-red);
+  line-height: 0.95;
+  display: inline-block;
+}
+
+/* Serif "Treatments": Decreased width & weight (slender condensed serif) */
+.serif-treatments {
+  font-family: var(--title-serif);
+  font-size: clamp(40px, 6.5vw, 84px);
+  color: var(--serif-dark);
+  font-weight: 400;
+  /* Decreased weight */
+  -webkit-text-stroke: 0;
+  /* No heavy stroke */
+  letter-spacing: -0.02em;
+  /* Condensed width */
+  line-height: 1;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.service-intro-para {
+  font-family: var(--body-font);
+  font-size: clamp(14px, 1.35vw, 18px);
+  color: #1a1a1a;
+  line-height: 1.6;
+  max-width: 880px;
+  margin: 18px 0 0 0;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   3-COLUMN 11-CARD GRID (PC UI/UX: CANVA PDF ASPECT RATIO & POSITION)
+   ========================================================================== */
+.services-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.4vw, 36px);
+  margin-top: 24px;
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-item-card {
+  scroll-margin-top: 36px;
+  background-color: var(--card-bg);
+  /* #F4F1EC exact bounded box */
+  border-radius: 22px;
+  padding: clamp(18px, 1.8vw, 24px) clamp(18px, 1.8vw, 24px) clamp(20px, 2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.service-item-card.card-highlight {
+  box-shadow: 0 0 0 3px var(--btn-orange), 0 12px 32px rgba(255, 117, 31, 0.28);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.service-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Image container: Landscape aspect ratio (~1.3:1 / 4:3 matching Canva PDF) */
+.card-image-box {
+  width: 100%;
+  aspect-ratio: 1.3 / 1;
+  max-height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Inset image: Object-fit cover with top-weighted position and slight scale to crop edge logos */
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+  /* Focal center on dental treatment, crops out bottom/corner logos */
+  display: block;
+  transform: scale(1.06);
+  /* Eliminates any corner watermarks/logos */
+  transform-origin: center 25%;
+  transition: transform 0.35s ease;
+}
+
+.service-item-card:hover .card-image-box img {
+  transform: scale(1.1);
+}
+
+.card-label-text {
+  font-family: var(--serif-font);
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 500;
+  color: #111111;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 2px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4em;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   BOTTOM CTA (BOOK APOINTMENT)
+   ========================================================================== */
+.service-bottom-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 28px;
+  width: 100%;
+}
+
+.btn-book-apointment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-orange);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: clamp(16px, 1.35vw, 20px);
+  padding: 18px 56px;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(255, 117, 31, 0.38);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.btn-book-apointment:hover {
+  background-color: var(--btn-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 117, 31, 0.5);
+}
+
+.btn-book-apointment:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE PRESERVATION - STRICTLY UNCHANGED)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .watermark-headline {
+    margin-bottom: 0;
+    white-space: normal;
+  }
+
+  .main-headline {
+    margin-top: -6px;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-canvas {
+    padding: 18px 16px 36px;
+  }
+
+  /* 2 Cards Per Row on Mobile with Respected Distance */
+  .services-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+    margin-bottom: 34px;
+  }
+
+  .service-item-card {
+    border-radius: 18px;
+    padding: 11px 11px 15px 11px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-image-box {
+    border-radius: 13px;
+    aspect-ratio: 1.3 / 1;
+    overflow: hidden;
+  }
+
+  .card-label-text {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 10px;
+    min-height: 2.6em;
+    padding: 0 4px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1a2228;
+  }
+
+  .card-info-snippet {
+    font-size: 11.5px;
+    line-height: 1.45;
+    margin-top: 4px;
+    padding: 0 4px;
+    color: #55606a;
+    text-align: center;
+  }
+
+  .watermark-headline {
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 0;
+    white-space: normal;
+    font-weight: 900;
+    -webkit-text-stroke: 0.8px #4a545e;
+    paint-order: stroke fill;
+    color: #4a545e;
+    opacity: 0.45;
+  }
+
+  .main-headline {
+    margin-top: -5px;
+  }
+
+  .script-modern {
+    font-size: clamp(46px, 10vw, 72px);
+    -webkit-text-stroke: 0.4px var(--script-red);
+  }
+
+  .serif-treatments {
+    font-size: clamp(32px, 7vw, 48px);
+    -webkit-text-stroke: 0;
+    font-weight: 400;
+  }
+
+  .service-intro-para {
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+
+  .btn-book-apointment {
+    padding: 14px 38px;
+    width: 80%;
+    max-width: 320px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-canvas {
+    padding: 16px 12px 30px;
+  }
+
+  /* 2 Cards Per Row on Compact Mobile with Respected Distance */
+  .services-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+    margin-bottom: 28px;
+  }
+
+  .service-item-card {
+    border-radius: 16px;
+    padding: 9px 8px 13px 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-image-box {
+    border-radius: 11px;
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .card-label-text {
+    font-size: 12.5px;
+    line-height: 1.25;
+    min-height: 2.6em;
+    margin-top: 8px;
+    padding: 0 2px;
+  }
+
+  .card-info-snippet {
+    font-size: 10.5px;
+    line-height: 1.4;
+    margin-top: 4px;
+    padding: 0 2px;
+  }
+
+  .service-back-link {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
+
+  .watermark-headline {
+    font-size: 19px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 0.6px #4a545e;
+    paint-order: stroke fill;
+    color: #4a545e;
+    opacity: 0.45;
+  }
+
+  .main-headline {
+    margin-top: -3px;
+  }
+
+  .script-modern {
+    font-size: 38px;
+  }
+
+  .serif-treatments {
+    font-size: 26px;
+  }
+}
+
+/* ==========================================================================
+   CARD SINGLE LINE INFO & "READ MORE" LINK
+   ========================================================================== */
+.card-info-snippet {
+  font-family: var(--body-font);
+  font-size: clamp(12px, 1.1vw, 13.5px);
+  color: #4f5860;
+  line-height: 1.45;
+  text-align: center;
+  margin: 6px 0 0;
+  padding: 0 4px;
+}
+
+.card-read-more-btn {
+  background: none;
+  border: none;
+  color: var(--btn-orange);
+  font-family: var(--body-font);
+  font-weight: 800;
+  /* Distinctly bold */
+  font-size: inherit;
+  text-decoration: none;
+  /* No underline */
+  cursor: pointer;
+  padding: 0 0 0 4px;
+  display: inline;
+  white-space: nowrap;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.card-read-more-btn:hover {
+  color: var(--btn-orange-hover);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   TREATMENT DETAIL MODAL (3 SUBTITLES, 2-COLOR AESTHETIC PALETTE, NOT BOLD)
+   ========================================================================== */
+.treatment-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 20, 25, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.treatment-modal-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.treatment-modal-box {
+  background: #ffffff;
+  border-radius: 22px;
+  max-width: 550px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 24px 26px 26px;
+  position: relative;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* Custom sleek scrollbar for modal */
+.treatment-modal-box::-webkit-scrollbar {
+  width: 5px;
+}
+.treatment-modal-box::-webkit-scrollbar-thumb {
+  background: #d8dde3;
+  border-radius: 999px;
+}
+
+.treatment-modal-backdrop.is-active .treatment-modal-box {
+  transform: translateY(0) scale(1);
+}
+
+/* Modal Close Button */
+.modal-close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f4f5f7;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.modal-close-icon:hover {
+  background: #e8eaed;
+  color: #000000;
+  transform: scale(1.06);
+}
+
+/* 1. Heading on TOP of and ABOVE the image (Centered) */
+.modal-header-meta {
+  margin-bottom: 12px;
+  padding: 0 32px; /* Balanced spacing to avoid close button and keep centered */
+  text-align: center;
+}
+
+.modal-category-badge {
+  display: inline-block;
+  color: var(--btn-orange);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+/* Heading Title: Color 1 (#1a2228), not heavy/bold, aesthetic serif */
+.modal-treatment-title {
+  font-family: var(--title-serif), 'Lustria', serif;
+  font-size: clamp(22px, 2.4vw, 26px);
+  font-weight: 500; /* Not bold */
+  color: #1a2228; /* Color 1 */
+  margin: 0 0 4px 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Subtitle: Color 2 (#55606a), regular weight */
+.modal-treatment-subtitle {
+  font-family: var(--body-font);
+  font-size: 13.5px;
+  font-weight: 400; /* Not bold */
+  color: #55606a; /* Color 2 */
+  margin: 0;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* 2. Aesthetic Optimized Image (Below Heading) */
+.modal-image-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 205px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 12px 0 16px;
+  background-color: #f7f6f4;
+  position: relative;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.modal-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 3. Three Subtitles with Short Info (Unboxed, 2-color palette, not bold) */
+.modal-subtitles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.modal-subtitle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Subtitle Heading: Color 1 (#1a2228), refined weight (not heavy bold) */
+.modal-sub-title {
+  font-family: var(--body-font);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1a2228; /* Color 1 */
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Subtitle Short Description: Color 2 (#55606a), regular weight */
+.modal-sub-desc {
+  font-family: var(--body-font);
+  font-size: 13px;
+  font-weight: 400; /* Not bold */
+  color: #55606a; /* Color 2 */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 4. Bottom Action: Strictly "Book Appointment" */
+.modal-footer-action {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-book-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-orange);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 42px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 18px rgba(255, 117, 31, 0.32);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  letter-spacing: 0.01em;
+}
+
+.modal-book-cta:hover {
+  background-color: var(--btn-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 117, 31, 0.42);
+}
+
+@media (max-width: 600px) {
+  .treatment-modal-box {
+    padding: 18px 16px 22px;
+  }
+  .modal-header-meta {
+    padding: 0 28px;
+    text-align: center;
+  }
+  .modal-image-box {
+    max-height: 165px;
+    margin: 10px 0 14px;
+  }
+  .modal-treatment-title {
+    font-size: 21px;
+  }
+  .modal-subtitles-list {
+    gap: 10px;
+  }
+  .modal-sub-title {
+    font-size: 13px;
+  }
+  .modal-sub-desc {
+    font-size: 12.5px;
+  }
+  .card-info-snippet {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE-ONLY: 4-BUTTON BOTTOM NAVIGATION BAR (Home, Doctor, Services, Book)
+   ========================================================================== */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .service-canvas {
+    padding-bottom: 85px !important;
+  }
+
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    background: rgba(14, 23, 42, 0.94) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35) !important;
+    z-index: 99999 !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    padding: 0 10px !important;
+    padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-bottom-nav-item {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: rgba(255, 255, 255, 0.70) !important;
+    text-decoration: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    padding: 6px 12px !important;
+    border-radius: 14px !important;
+    transition: color 0.24s ease, transform 0.15s ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+    flex: 1 !important;
+    max-width: 82px !important;
+    background: transparent !important;
+  }
+
+  .mobile-bottom-nav-item:active {
+    transform: scale(0.90) !important;
+  }
+
+  .mobile-bottom-nav-item svg {
+    width: 21px !important;
+    height: 21px !important;
+    stroke-width: 2.1 !important;
+    stroke: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  /* Active 'Services' Tab: Highlighted in Signature Vibrant Orange Pill */
+  .mobile-bottom-nav-item.active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #eb783f 0%, #db652b 100%) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 16px rgba(235, 120, 63, 0.45) !important;
+  }
+
+  .mobile-bottom-nav-item.active svg {
+    stroke: #ffffff !important;
+    transform: translateY(-1px) scale(1.08) !important;
+  }
+
+  .mobile-bottom-nav-item.active span {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta {
+    color: #ffffff !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta .nav-book-pill {
+    background: linear-gradient(135deg, #eb783f 0%, #d35400 100%) !important;
+    padding: 3px 12px !important;
+    border-radius: 999px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 10px rgba(235, 120, 63, 0.45) !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta svg {
+    stroke: #ffffff !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta span {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+}

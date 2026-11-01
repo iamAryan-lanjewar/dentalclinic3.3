@@ -15,3 +15,8 @@ Thumbs.db
 .env
 .vscode/
 .idea/
+
+# Runtime Data & Privacy-Protected Logs
+data/
+logs/
+

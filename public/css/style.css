@@ -1,3 +1,10 @@
+.testimonials-carousel-dots { display: none; }
+.value-carousel-dots { display: none; }
+.desc-desktop { display: inline; }
+.desc-mobile { display: none; }
+.title-desktop, .subtitle-desktop, .block-desktop { display: block; }
+.title-mobile, .subtitle-mobile, .block-mobile { display: none; }
+.mobile-bottom-nav { display: none; }
 /* ==========================================================================
    DENTAL CLINIC 2.0 - 100% PIXEL-PERFECT DESIGN & PREMIUM UX SYSTEM
    ========================================================================== */
@@ -665,6 +672,7 @@ button {
     overflow: hidden;
   }
 
+
   .mobile-hero-wrapper {
     display: block !important;
     width: 100%;
@@ -736,12 +744,1402 @@ button {
     background-color: rgba(255, 255, 255, 0.12);
   }
 
-  /* On mobile, retract site header when at top of hero so full PDF flyer (logo, heading, doctor) is 100% visible */
-  .site-header.mobile-hero-hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
+
+  /* ========================================================================
+     MOBILE-ONLY: SECTION 4 (GOING THE EXTRA MILE)
+     Clean, Compact, Short Length, Interactive Tactile UI/UX (Not Bloated)
+     ======================================================================== */
+  .extra-mile-section {
+    min-height: auto !important;
+    padding: 32px 0 28px 0 !important;
+    background-color: var(--color-cyan-light, #D4EBF0) !important;
+    box-sizing: border-box !important;
   }
+
+  .extra-mile-section .section-container {
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .extra-mile-header {
+    margin-bottom: 16px !important;
+    text-align: left !important;
+  }
+
+  .extra-mile-title {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(1.85rem, 7.2vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    color: var(--color-charcoal, #1a202c) !important;
+    line-height: 1.18 !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  .extra-mile-subtitle {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+  }
+
+  /* 3 Cards inside #F4F1EC Color Bounded Boxes (Like Old One, Carefully Styled) */
+  .extra-mile-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 4px !important;
+  }
+
+  .extra-mile-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    background: #F4F1EC !important; /* #F4F1EC COLOR BOUNDED BOX */
+    border: 1.5px solid rgba(41, 111, 141, 0.16) !important; /* CRISP BOUNDARY BORDER */
+    border-radius: 18px !important; /* ELEGANT ROUNDED BOX CORNERS */
+    padding: 16px 18px !important; /* BALANCED PADDING INSIDE BOX */
+    box-shadow: 0 4px 14px rgba(41, 111, 141, 0.06) !important; /* SOFT SHADOW */
+    cursor: default !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  .extra-mile-card:last-child {
+    border: 1.5px solid rgba(41, 111, 141, 0.16) !important;
+    padding: 16px 18px !important;
+  }
+
+  /* No logos on mobile (clean & aesthetic) */
+  .extra-mile-icon-wrap {
+    display: none !important;
+  }
+
+  .extra-mile-card:active .extra-mile-icon-wrap {
+    transform: scale(1.1) !important;
+  }
+
+  .extra-mile-icon-wrap svg {
+    width: 32px !important;
+    height: 32px !important;
+    filter: drop-shadow(0 2px 6px rgba(41, 111, 141, 0.16)) !important;
+  }
+
+  /* Card Content inside the Bounded Box */
+  .extra-mile-card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .extra-mile-badge {
+    align-self: flex-start !important;
+    font-family: var(--font-sans) !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #1e5a73 !important;
+    background: rgba(41, 111, 141, 0.12) !important;
+    padding: 3px 9px !important;
+    border-radius: 999px !important;
+    margin-bottom: 2px !important;
+    display: inline-block !important;
+  }
+
+  .extra-mile-card-title {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.10rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  .extra-mile-card-desc {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-size: 0.86rem !important;
+    line-height: 1.48 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY SECTION 5: MODERN DENTAL CHAIR & UNIT (CLEAN & AESTHETIC)
+     ======================================================================== */
+  .chair-unit-section {
+    min-height: auto !important;
+    padding: 32px 0 36px 0 !important;
+    background-color: var(--color-cyan-light, #D4EBF0) !important;
+    box-sizing: border-box !important;
+  }
+
+  .chair-unit-section .section-container {
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .chair-unit-header {
+    margin-bottom: 16px !important;
+    text-align: left !important;
+  }
+
+  .chair-unit-main-title.title-mobile {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(1.85rem, 7vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    color: var(--color-charcoal, #1a202c) !important;
+    line-height: 1.18 !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  .chair-unit-main-subtitle.subtitle-mobile {
+    font-size: 0.90rem !important;
+    line-height: 1.48 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+  }
+
+  .equipment-showcase {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Unboxed on mobile: no white box, no card border, sits naturally on page */
+  .equipment-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    cursor: default !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .equipment-row.chair-row .equipment-img-box,
+  .equipment-row.unit-row .equipment-img-box {
+    order: 1 !important;
+  }
+
+  .equipment-row.chair-row .equipment-text-box,
+  .equipment-row.unit-row .equipment-text-box {
+    order: 2 !important;
+  }
+
+  .equipment-img-box {
+    width: 100% !important;
+    height: 195px !important;
+    aspect-ratio: auto !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    margin-bottom: 2px !important;
+    box-shadow: 0 8px 24px rgba(41, 111, 141, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    position: relative !important;
+  }
+
+  .equipment-img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .equipment-img-badge {
+    top: 10px !important;
+    left: 10px !important;
+    font-size: 0.70rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    padding: 4px 11px !important;
+    border-radius: 6px !important;
+    background: rgba(30, 58, 70, 0.9) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .equipment-text-box {
+    padding: 2px 2px 0 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  .equipment-badge {
+    display: inline-block !important;
+    align-self: flex-start !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: #1e5a73 !important;
+    background: rgba(41, 111, 141, 0.12) !important;
+    padding: 3px 10px !important;
+    border-radius: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .equipment-title {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: var(--color-charcoal, #1a202c) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .equipment-desc.desc-mobile {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.62 !important;
+    color: #33444d !important;
+    margin: 0 !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY SECTION 6: VALUE FOR CLIENTS (CENTER PEEK COVERFLOW CAROUSEL)
+     ======================================================================== */
+  .value-clients-section {
+    scroll-margin-top: 24px !important;
+    min-height: auto !important;
+    padding: 36px 0 42px 0 !important;
+    background-color: var(--color-cyan-light, #D4EBF0) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .value-clients-section .section-container {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .value-clients-header {
+    margin-bottom: 20px !important;
+    text-align: left !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .value-section-eyebrow {
+    font-size: 0.70rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #1e5a73 !important;
+    background: rgba(41, 111, 141, 0.12) !important;
+    padding: 3px 10px !important;
+    border-radius: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .value-clients-title {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(1.85rem, 7vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    color: var(--color-charcoal, #1a202c) !important;
+    line-height: 1.18 !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  .value-clients-subtitle {
+    font-size: 0.90rem !important;
+    line-height: 1.48 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+  }
+
+  /* Center-Stage Carousel Track with Symmetrical Left & Right Peek Spacing */
+  .value-clients-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    gap: 16px !important;
+    /* 11vw padding ensures center card (78vw) is mathematically centered with equal 11vw margins */
+    padding: 8px 11vw 20px 11vw !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .value-clients-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Cards with increased height & width; side cards peek dimmed & scaled down */
+  .value-client-card {
+    flex: 0 0 78vw !important;
+    width: 78vw !important;
+    max-width: 335px !important;
+    min-width: 265px !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: normal !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    cursor: default !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transform: scale(0.90);
+    opacity: 0.55;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
+  }
+
+  /* Active center card: Full scale, elevated contrast */
+  .value-client-card.active {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+
+  /* Taller & wider image frame matching reference format */
+  .value-img-frame {
+    width: 100% !important;
+    height: 275px !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    margin-bottom: 14px !important;
+    box-shadow: 0 8px 26px rgba(41, 111, 141, 0.14) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+    background: #ffffff !important;
+    transition: box-shadow 0.35s ease, transform 0.35s ease !important;
+  }
+
+  .value-client-card.active .value-img-frame {
+    box-shadow: 0 16px 38px rgba(41, 111, 141, 0.22) !important;
+  }
+
+  .value-img-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .value-card-label {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.38rem !important;
+    font-weight: 700 !important;
+    color: #d35400 !important; /* Warm terracotta/coral */
+    line-height: 1.25 !important;
+    margin: 0 0 6px 0 !important;
+    text-transform: capitalize !important;
+    text-align: left !important;
+    transition: color 0.3s ease !important;
+  }
+
+  .value-card-desc {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.58 !important;
+    color: #2e444f !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Carousel Pagination Indicators */
+  .value-carousel-dots {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+  }
+
+  .carousel-dot {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 999px !important;
+    background: rgba(41, 111, 141, 0.25) !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: pointer !important;
+  }
+
+  .carousel-dot.active {
+    width: 22px !important;
+    background: #d35400 !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY SECTION 7: WHAT MY PATIENTS SAY (#E8744C BACKGROUND & VERTICAL)
+     ======================================================================== */
+  .testimonials-section {
+    min-height: auto !important;
+    padding: 42px 0 46px 0 !important;
+    background-color: #E8744C !important; /* User specified terracotta background */
+    box-sizing: border-box !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .testimonials-section .section-container {
+    padding: 0 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    align-items: flex-start !important;
+  }
+
+  .testimonials-header-wrap {
+    padding: 0 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* One-Line Heading with optimal responsive clamp */
+  .testimonials-title {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(1.8rem, 6.8vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important; /* Pure white on #E8744C */
+    line-height: 1.18 !important;
+    margin: 0 0 6px 0 !important;
+    white-space: nowrap !important; /* ONE SINGLE LINE */
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+  }
+
+  .testimonials-subtitle {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-style: normal !important;
+    font-size: 0.94rem !important;
+    line-height: 1.48 !important;
+    color: rgba(255, 255, 255, 0.92) !important; /* Soft white on #E8744C */
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Vertical scrolling track */
+  .testimonials-grid {
+    display: flex !important;
+    flex-direction: column !important; /* VERTICAL SCROLLING */
+    gap: 22px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Unboxed review items with clean vertical hierarchy on #E8744C */
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    background: transparent !important; /* UNBOXED: NO BOX FORMAT */
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important; /* Elegant translucent white divider */
+    padding: 0 0 20px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .testimonial-card:last-child,
+  .testimonial-card:nth-child(3) {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Show only 3 reviews on mobile */
+  .testimonial-card:nth-child(n+4) {
+    display: none !important;
+  }
+
+  .testimonial-card .star-rating {
+    color: #ffd700 !important; /* Brilliant gold stars on terracotta */
+    font-size: 1.22rem !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .testimonial-card .review-quote {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.12rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    line-height: 1.62 !important;
+    color: #ffffff !important; /* Crisp white quote text */
+    margin: 0 0 14px 0 !important;
+    text-align: left !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .reviewer-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+    text-align: left !important;
+  }
+
+  .testimonial-card .reviewer-name {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    color: #ffffff !important; /* White reviewer name */
+    text-transform: capitalize !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .reviewer-badge {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.82) !important; /* Soft cream badge */
+    text-align: left !important;
+    margin-top: 1px !important;
+  }
+
+  .testimonials-carousel-dots {
+    display: none !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY SECTION 8: LOCATION & CONTACT (UNBOXED CONTENT & TALLER MAP)
+     ======================================================================== */
+  /* Cut massive blank space at bottom: compact, neat layout */
+  .footer-section {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 28px 0 68px 0 !important; /* Cut out massive blank space; snug 68px clearance for bottom nav */
+    background-color: var(--color-cyan-light, #D4EBF0) !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-section .section-container {
+    min-height: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    padding: 0 18px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Erase "LOCATION & APPOINTMENTS" / "CLINIC LOCATION" eyebrow badge on mobile */
+  .footer-eyebrow {
+    display: none !important;
+  }
+
+  .footer-top-row {
+    margin-bottom: 16px !important;
+    text-align: left !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Simple, clean headline: ONLY "Clinic Location" (all other image info deleted) */
+  .footer-headline {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(1.85rem, 7.2vw, 2.3rem) !important;
+    font-weight: 700 !important;
+    color: var(--color-charcoal, #1a202c) !important;
+    line-height: 1.18 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Erase subtitle paragraph info on mobile */
+  .footer-subheadline {
+    display: none !important;
+  }
+
+  .footer-main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Clean, Unboxed Map (Zero Container Gaps, Zero Extra Boxes, Flawless Frame) */
+  .contact-map-column {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+  }
+
+  .contact-map-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Don't put any info overlays on the map on mobile */
+  .map-card-header,
+  .map-card-footer {
+    display: none !important;
+  }
+
+  /* Attractive, balanced map frame for optimal mobile UI/UX (240px clean height) */
+  .map-iframe-container {
+    display: block !important;
+    width: 100% !important;
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1.5px solid rgba(41, 111, 141, 0.16) !important;
+    box-shadow: 0 4px 16px rgba(41, 111, 141, 0.10) !important;
+    background: #e2e8f0 !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .map-iframe-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    border: 0 !important;
+    display: block !important;
+    border-radius: 14px !important;
+  }
+
+  /* Completely Unboxed Contact Information (No White Boxes / Boundaries) */
+  .contact-cards-column {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 22px !important;
+  }
+
+  .contact-info-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    background: transparent !important; /* UNBOXED: NO WHITE BOX */
+    border: none !important;              /* NO BOX BOUNDARY */
+    border-bottom: 1px solid rgba(41, 111, 141, 0.14) !important; /* Clean subtle divider line */
+    border-radius: 0 !important;
+    padding: 2px 0 16px 0 !important;
+    box-shadow: none !important;          /* NO SHADOW */
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-info-card:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .contact-card-icon {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    border-radius: 10px !important;
+    background: rgba(41, 111, 141, 0.12) !important;
+    color: #1e5a73 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: none !important;
+    margin-top: 2px !important;
+  }
+
+  .contact-card-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: currentColor !important;
+  }
+
+  .contact-card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    flex: 1 !important;
+  }
+
+  .contact-card-label {
+    font-family: var(--font-sans) !important;
+    font-size: 0.70rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #d35400 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .contact-card-value {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.08rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.32 !important;
+  }
+
+  .contact-card-detail {
+    font-family: var(--font-sans, system-ui, -apple-system, sans-serif) !important;
+    font-size: 0.86rem !important;
+    line-height: 1.48 !important;
+    color: #475569 !important;
+    margin-top: 2px !important;
+  }
+
+  .contact-card-action {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    font-family: var(--font-sans) !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: #1e5a73 !important;
+    margin-top: 4px !important;
+    text-decoration: none !important;
+  }
+
+  /* Social Media Icons */
+  .social-icons-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    margin: 10px 0 18px 0 !important;
+  }
+
+  .social-circle-btn {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    color: #1e5a73 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(41, 111, 141, 0.18) !important;
+    box-shadow: 0 2px 8px rgba(41, 111, 141, 0.06) !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
+  }
+
+  .social-circle-btn:active {
+    transform: scale(0.92) !important;
+    background: #eb783f !important;
+    color: #ffffff !important;
+  }
+
+  /* Barrier-Free Branch Banner */
+  .barrier-free-banner {
+    text-align: center !important;
+    font-family: var(--font-sans) !important;
+    font-size: 0.82rem !important;
+    line-height: 1.48 !important;
+    color: #475569 !important;
+    padding: 12px 10px 0 10px !important;
+    margin-bottom: 0 !important; /* Erased bottom margin to cut blank space */
+    border-top: 1px solid rgba(41, 111, 141, 0.15) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Disable toast notifications on mobile */
+  .toast-notice {
+    display: none !important;
+  }
+
+  .desc-desktop {
+    display: none !important;
+  }
+
+  .desc-mobile {
+    display: inline !important;
+  }
+
+  .title-desktop, .subtitle-desktop, .block-desktop {
+    display: none !important;
+  }
+
+  .title-mobile, .subtitle-mobile, .block-mobile {
+    display: block !important;
+  }
+
+
+  /* ERASE UPPER HEADER ON MOBILE (As requested: clean upper screen, zero clutter) */
+  .site-header {
+    display: none !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY: 4-BUTTON BOTTOM NAVIGATION BAR (SLIDING ORANGE PILL ANIMATION LIKE PC)
+     ======================================================================== */
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    background: rgba(14, 23, 42, 0.94) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35) !important;
+    z-index: 99999 !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    padding: 0 10px !important;
+    padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Animated Sliding Orange Pill Indicator (Exact PC Navigation Glide) */
+  .mobile-nav-sliding-pill {
+    position: absolute !important;
+    top: 6px !important;
+    left: 0 !important;
+    height: calc(100% - 12px - env(safe-area-inset-bottom, 0px)) !important;
+    background: #eb783f !important;
+    background: linear-gradient(135deg, #eb783f 0%, #db652b 100%) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 16px rgba(235, 120, 63, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    transition: transform 0.32s cubic-bezier(0.2, 0.85, 0.25, 1),
+                width 0.32s cubic-bezier(0.2, 0.85, 0.25, 1),
+                opacity 0.2s ease !important;
+    opacity: 0;
+    will-change: transform, width;
+  }
+
+  .mobile-bottom-nav-item {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: rgba(255, 255, 255, 0.70) !important;
+    text-decoration: none !important;
+    font-family: var(--font-sans, -apple-system, sans-serif) !important;
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    padding: 6px 12px !important;
+    border-radius: 14px !important;
+    transition: color 0.24s ease, transform 0.15s ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+    flex: 1 !important;
+    max-width: 82px !important;
+    background: transparent !important;
+  }
+
+  /* Tactile Press State: PC/Native App bounce */
+  .mobile-bottom-nav-item:active {
+    transform: scale(0.90) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  .mobile-bottom-nav-item svg {
+    width: 21px !important;
+    height: 21px !important;
+    stroke-width: 2.1 !important;
+    stroke: rgba(255, 255, 255, 0.75) !important;
+    transition: stroke 0.24s ease, transform 0.28s cubic-bezier(0.2, 0.85, 0.25, 1) !important;
+  }
+
+  /* Active State (Sits over the sliding orange pill) */
+  .mobile-bottom-nav-item.active {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+
+  .mobile-bottom-nav-item.active svg {
+    stroke: #ffffff !important;
+    transform: translateY(-2px) scale(1.10) !important;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25)) !important;
+  }
+
+  .mobile-bottom-nav-item.active span {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Distinct Highlight for 4th button: Book */
+  .mobile-bottom-nav-item.nav-book-cta {
+    color: #ffffff !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta .nav-book-pill {
+    background: linear-gradient(135deg, #eb783f 0%, #d35400 100%) !important;
+    padding: 3px 12px !important;
+    border-radius: 999px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 10px rgba(235, 120, 63, 0.45), 0 0 16px rgba(235, 120, 63, 0.25) !important;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta:active .nav-book-pill {
+    transform: scale(0.90) !important;
+    box-shadow: 0 1px 4px rgba(235, 120, 63, 0.3) !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta svg {
+    stroke: #ffffff !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .mobile-bottom-nav-item.nav-book-cta span {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+
+  /* Spacing at bottom of page so bottom bar doesn't obstruct content */
+  .page-canvas,
+  .appointment-page-canvas {
+    padding-bottom: 75px !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY SPECIALIST SECTION (Aesthetic, Compact, Best Line-Spacing)
+     ======================================================================== */
+  .specialist-section {
+    min-height: auto !important;
+    padding: 28px 0 24px 0 !important;
+    background-color: var(--color-cream, #E9F4F5) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .specialist-section .section-container {
+    padding: 0 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .specialist-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .luxury-doctor-showcase {
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 auto 10px auto !important;
+  }
+
+  .luxury-gold-glow {
+    width: 230px !important;
+    height: 290px !important;
+    filter: blur(16px) !important;
+    opacity: 0.65;
+  }
+
+  .luxury-doctor-frame {
+    width: 100% !important;
+    padding: 6px !important;
+    border-radius: 20px !important;
+  }
+
+  .luxury-photo-wrap {
+    width: 100% !important;
+    height: 280px !important;
+    border-radius: 15px !important;
+  }
+
+  .specialist-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .specialist-title-wrap {
+    margin-top: 0 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .specialist-script-title {
+    font-size: 1.85rem !important;
+    line-height: 1.1 !important;
+    color: #eb783f !important;
+    display: inline-block !important;
+    margin-bottom: 2px !important;
+  }
+
+  .specialist-dr-header {
+    margin-bottom: 8px !important;
+  }
+
+  .specialist-dr-name {
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+    margin: 0 0 4px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    color: var(--color-navy, #2E4A82) !important;
+  }
+
+  .dr-credentials {
+    font-size: 0.72rem !important;
+    padding: 2px 7px !important;
+    border-radius: 999px !important;
+    background: rgba(235, 120, 63, 0.12) !important;
+    color: #d35400 !important;
+    font-weight: 700 !important;
+  }
+
+  .specialist-dr-title {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    color: #4b5563 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Best text line spacing for bio paragraph */
+  .specialist-paragraph {
+    font-size: 0.86rem !important;
+    line-height: 1.65 !important;
+    color: #374151 !important;
+    margin-bottom: 14px !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  /* Unboxed 3 Items on Mobile (NO BOXES) with Clean Spacing */
+  .specialist-info-grid {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+    gap: 11px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .specialist-info-card {
+    background: transparent !important;   /* NO BOX */
+    border: none !important;              /* NO BORDER */
+    box-shadow: none !important;          /* NO SHADOW */
+    padding: 0 !important;                /* Flush padding */
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .specialist-info-card .info-icon {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 6px !important;
+    background: rgba(46, 74, 130, 0.08) !important;
+    color: var(--color-navy, #2E4A82) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .specialist-info-card:nth-child(2) .info-icon {
+    background: rgba(235, 120, 63, 0.12) !important;
+    color: #d35400 !important;
+  }
+
+  .specialist-info-card:nth-child(3) .info-icon {
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #059669 !important;
+  }
+
+  .specialist-info-card .info-icon svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .specialist-info-card .info-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+    overflow: hidden !important;
+  }
+
+  .specialist-info-card .info-text strong {
+    font-family: var(--font-heading, 'Fraunces', serif) !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    color: #0f2744 !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* One-line description with best line spacing & no overflow */
+  .specialist-info-card .info-text span {
+    font-family: var(--font-sans, sans-serif) !important;
+    font-size: 0.77rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    color: #64748b !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+
+  /* Short, compact, non-bulky action button */
+  .specialist-action-row {
+    margin-top: 4px !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  .btn-specialist-consult {
+    width: fit-content !important;
+    max-width: max-content !important;
+    height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 10px 0 16px !important;
+    background: linear-gradient(135deg, #182e52 0%, #2E4A82 100%) !important;
+    color: #ffffff !important;
+    font-family: var(--font-sans, sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.01em !important;
+    border-radius: 999px !important;
+    border: none !important;
+    box-shadow: 0 4px 14px -2px rgba(46, 74, 130, 0.3) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+
+
+  .btn-specialist-consult:active {
+    transform: scale(0.96) !important;
+    box-shadow: 0 2px 8px rgba(46, 74, 130, 0.25) !important;
+  }
+
+  .btn-specialist-consult .arrow-circle {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.22) !important;
+    backdrop-filter: blur(4px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    flex-shrink: 0 !important;
+  }
+
+  .btn-specialist-consult .arrow-circle svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  /* ========================================================================
+     MOBILE-ONLY: SECTION 3 (WHAT WE SERVE)
+     ======================================================================== */
+  .what-we-serve-section {
+    min-height: auto !important;
+    padding: 32px 0 28px 0 !important;
+    background-color: var(--color-cream, #E9F4F5) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .what-we-serve-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 18px !important;
+    gap: 16px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .serve-content {
+    display: contents !important;
+  }
+
+  /* "what we serve" in ONE line of heading size */
+  .serve-headline {
+    order: 1 !important;
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: clamp(2.15rem, 8.2vw, 2.55rem) !important;
+    font-weight: 700 !important;
+    color: var(--color-black, #111827) !important;
+    white-space: nowrap !important;
+    line-height: 1.15 !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  /* Compact, aesthetic image sizing and position */
+  .serve-image-wrap {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 8px auto !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12) !important;
+    box-sizing: border-box !important;
+  }
+
+  .serve-image-wrap img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .treatment-bullet-list {
+    order: 3 !important;
+    list-style: none !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .treatment-bullet-list li {
+    font-family: var(--font-serif-bold, 'Fraunces', serif) !important;
+    font-size: 1.22rem !important;
+    line-height: 1.65 !important;
+    color: var(--color-black, #111827) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 6px 12px !important;
+    border-radius: 12px !important;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.18s ease, color 0.18s ease, box-shadow 0.22s ease !important;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .treatment-bullet-list li::before {
+    content: "•" !important;
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+    color: var(--color-navy, #2E4A82) !important;
+    display: inline-block !important;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.18s ease !important;
+  }
+
+  /* Mobile Kinetic Tip-Tap Pop-Up State: Pushes Up & Moves to the Side */
+  .treatment-bullet-list li.tip-tap-active,
+  .treatment-bullet-list li.touch-pop,
+  .treatment-bullet-list li:active {
+    transform: translateX(12px) translateY(-2px) scale(1.04) !important;
+    background-color: rgba(255, 117, 31, 0.13) !important;
+    color: #ff751f !important;
+    box-shadow: 0 5px 16px rgba(255, 117, 31, 0.2) !important;
+    padding-left: 16px !important;
+  }
+
+  .treatment-bullet-list li.tip-tap-active::before,
+  .treatment-bullet-list li.touch-pop::before,
+  .treatment-bullet-list li:active::before {
+    color: #ff751f !important;
+    transform: scale(1.4) rotate(12deg) !important;
+  }
+
+  .treatment-bullet-list li.tip-tap-active a,
+  .treatment-bullet-list li.touch-pop a,
+  .treatment-bullet-list li:active a {
+    color: #ff751f !important;
+    font-weight: 700 !important;
+  }
+
+  /* Mobile Tip-Tap Settle: Drops down and returns to actual position */
+  .treatment-bullet-list li.tip-tap-settle {
+    transform: translateX(0) translateY(0) scale(1) !important;
+    padding-left: 12px !important;
+    transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, padding 0.22s ease !important;
+  }
+
+  .btn-click-here {
+    order: 4 !important;
+    width: fit-content !important;
+    height: 42px !important;
+    padding: 0 28px !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+    align-self: flex-start !important;
+  }
+
 }
 
 /* Default: Mobile hero stage hidden on desktop screens */
@@ -1231,21 +2629,59 @@ button {
   align-items: center;
   gap: 14px;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  transition: var(--transition-smooth);
+  padding: 6px 14px;
+  border-radius: 12px;
+  transform-origin: left center;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.18s ease,
+              color 0.18s ease,
+              box-shadow 0.22s ease,
+              padding 0.18s ease;
+  will-change: transform, box-shadow;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .treatment-bullet-list li::before {
   content: "•";
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   line-height: 1;
+  color: var(--color-navy, #2E4A82);
+  display: inline-block;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.18s ease;
+  will-change: transform;
 }
 
+/* Kinetic Tip-Tap Pop-Up State: Pushes Up & Moves to the Side */
+.treatment-bullet-list li.tip-tap-active,
 .treatment-bullet-list li:hover {
-  background-color: rgba(46, 74, 130, 0.06);
-  color: var(--color-navy);
-  transform: translateX(4px);
+  transform: translateX(14px) translateY(-2px) scale(1.035);
+  background-color: rgba(255, 117, 31, 0.12);
+  color: #ff751f;
+  box-shadow: 0 5px 18px rgba(255, 117, 31, 0.2);
+  padding-left: 18px;
+}
+
+.treatment-bullet-list li.tip-tap-active::before,
+.treatment-bullet-list li:hover::before {
+  color: #ff751f;
+  transform: scale(1.4) rotate(12deg);
+}
+
+.treatment-bullet-list li.tip-tap-active a,
+.treatment-bullet-list li:hover a {
+  color: #ff751f;
+  font-weight: 700;
+}
+
+/* Tip-Tap Settle: Drops down and returns to actual position */
+.treatment-bullet-list li.tip-tap-settle {
+  transform: translateX(0) translateY(0) scale(1);
+  padding-left: 14px;
+  transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.22s ease,
+              color 0.22s ease,
+              box-shadow 0.22s ease,
+              padding 0.22s ease;
 }
 
 /* Button: Click Here */
@@ -1262,6 +2698,8 @@ button {
   border-radius: var(--radius-pill);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  text-decoration: none;
+  border: none;
   transition: var(--transition-smooth);
 }
 
@@ -1557,6 +2995,7 @@ button {
    10. SECTION 6: VALUE FOR CLIENTS (FORM 6)
    -------------------------------------------------------------------------- */
 .value-clients-section {
+  scroll-margin-top: 80px;
   width: 100%;
   background-color: var(--color-cyan-light);
   padding: clamp(35px, 4vh, 48px) 0 clamp(40px, 5vh, 60px);
@@ -2312,14 +3751,9 @@ button {
     flex-direction: column-reverse;
   }
 
-  .value-clients-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+
+
 
   .footer-main-grid {
     grid-template-columns: 1fr;
@@ -2332,12 +3766,24 @@ button {
   .specialist-section,
   .what-we-serve-section,
   .extra-mile-section,
-  .chair-unit-section,
-  .value-clients-section,
-  .testimonials-section,
-  .footer-section {
+  .chair-unit-section {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .footer-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .testimonials-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .value-clients-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .hero-headline {

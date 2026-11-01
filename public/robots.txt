@@ -1,4 +1,27 @@
+# Modern Dental Clinic Robots.txt - Optimized for Google Search Console & Web Crawlers
 User-agent: *
 Allow: /
-Sitemap: https://reallygreatsite.com/sitemap.xml
+Disallow: /api/
+Disallow: /data/
+Disallow: /logs/
+
+User-agent: Googlebot
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# XML Sitemap Location
+Sitemap: https://builddear.com/sitemap.xml
 

@@ -1,31 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage: Best Dental Clinic in Nagpur -->
   <url>
-    <loc>https://reallygreatsite.com/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://builddear.com/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://reallygreatsite.com/images/hero-girl.png</image:loc>
-      <image:title>Your Smile Does Really Matter - Dental Care</image:title>
+      <image:loc>https://builddear.com/images/hero-girl.png</image:loc>
+      <image:title>Best Dental Clinic in Nagpur - Modern Dental Care</image:title>
+      <image:caption>Healthy, radiant smiles at Modern Dental Clinic, Sadar, Nagpur</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://reallygreatsite.com/images/doctor-dentist.jpg</image:loc>
-      <image:title>Our Specialist Dental Professional BDS MDS</image:title>
+      <image:loc>https://builddear.com/images/doctor-dentist.jpg</image:loc>
+      <image:title>Dr. Priya Arora (BDS, MDS) - Chief Dental Specialist Nagpur</image:title>
+      <image:caption>Expert dental surgeon providing gentle, painless dental treatments in Nagpur</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://reallygreatsite.com/images/what-we-serve.jpg</image:loc>
-      <image:title>Comprehensive Dental Care and Treatments</image:title>
+      <image:loc>https://builddear.com/images/what-we-serve.jpg</image:loc>
+      <image:title>Comprehensive Dental Care Treatments Sadar Nagpur</image:title>
+      <image:caption>Modern root canal, cosmetic dentistry, and dental implants in Nagpur</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://reallygreatsite.com/images/dental-chair.jpg</image:loc>
-      <image:title>Modern Dental Chair for Comfortable Treatment</image:title>
+      <image:loc>https://builddear.com/images/dental-chair.jpg</image:loc>
+      <image:title>Ergonomic Dental Operatory Chair - Anxiety Free Clinic Nagpur</image:title>
+      <image:caption>High comfort dental treatment facility in Sadar, Nagpur</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://reallygreatsite.com/images/dental-unit.jpg</image:loc>
-      <image:title>Modern Dental Unit and Instruments</image:title>
+      <image:loc>https://builddear.com/images/dental-unit.jpg</image:loc>
+      <image:title>Modern Dental Sterilization and Advanced Instruments Nagpur</image:title>
+      <image:caption>Sterilized clinical equipment complying with international hospital hygiene standards</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
     </image:image>
+  </url>
+
+  <!-- Dental Treatments & Services Page -->
+  <url>
+    <loc>https://builddear.com/service.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://builddear.com/images/services/service-11-root-canal.png</image:loc>
+      <image:title>Painless Rotary Root Canal Treatment (RCT) in Nagpur</image:title>
+      <image:caption>Single-sitting rotary endodontics by specialist dentists in Sadar, Nagpur</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://builddear.com/images/services/service-7-denture.jpg</image:loc>
+      <image:title>Custom Lightweight Dentures Full Mouth Rehabilitation Nagpur</image:title>
+      <image:caption>Natural chewing and speech restoration with custom flexible dentures</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://builddear.com/images/services/service-5-veneers.jpg</image:loc>
+      <image:title>Porcelain Dental Veneers and Smile Makeover Nagpur</image:title>
+      <image:caption>Ultra-thin aesthetic porcelain veneers for tooth alignment and radiant shade</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://builddear.com/images/services/service-4-implant.jpg</image:loc>
+      <image:title>Permanent Titanium Dental Implants in Sadar Nagpur</image:title>
+      <image:caption>Lifetime tooth replacement implants using biocompatible medical titanium</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://builddear.com/images/services/service-9-ultrasonic-scaling.png</image:loc>
+      <image:title>Ultrasonic Teeth Cleaning and Stain Removal Nagpur</image:title>
+      <image:caption>Gentle ultrasonic plaque prophylaxis and gum care treatment</image:caption>
+      <image:geo_location>Nagpur, Maharashtra, India</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Online Appointment Booking Page -->
+  <url>
+    <loc>https://builddear.com/appointment.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
 

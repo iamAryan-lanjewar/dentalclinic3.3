@@ -5,81 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // Elements
-  const bookingModal = document.getElementById('bookingModal');
-  const serviceModal = document.getElementById('serviceModal');
   const toastNotice = document.getElementById('toastNotice');
-  const bookingForm = document.getElementById('bookingForm');
   const floatingBookPill = document.getElementById('floatingBookPill');
-
-  // Service details database for interactive explorer
-  const serviceDetails = {
-    'root canel': {
-      title: 'Root Canal Treatment (Endodontics)',
-      desc: 'Gentle, pain-free therapy designed to eliminate bacteria from the infected root canal, prevent reinfection of the tooth, and save the natural tooth. Performed with high-precision digital imaging and motorized rotaries.',
-      duration: '45 - 60 mins',
-      recovery: 'Immediate return to daily activities'
-    },
-    'dnture': {
-      title: 'Modern Dentures & Prosthodontics',
-      desc: 'Custom-crafted complete or partial dentures tailored to your exact jaw contour and bite. Lightweight, durable, and naturally aesthetic.',
-      duration: '2 - 3 visits',
-      recovery: 'Comfortable adaptation within days'
-    },
-    'cosmatic filling': {
-      title: 'Cosmetic Composite Fillings',
-      desc: 'Tooth-colored aesthetic resin composite fillings that blend seamlessly with natural enamel. Restores tooth structure while preserving a radiant, natural look.',
-      duration: '30 mins per tooth',
-      recovery: 'Instant cure under specialized light'
-    },
-    'surgical extraction': {
-      title: 'Surgical & Wisdom Tooth Extraction',
-      desc: 'Minimally invasive extraction performed with local anesthesia and modern gentle surgical instruments to ensure maximum patient comfort and rapid healing.',
-      duration: '30 - 45 mins',
-      recovery: '2 - 3 days gentle care'
-    },
-    'ultrasonic scaling': {
-      title: 'Ultrasonic Scaling & Prophylaxis',
-      desc: 'Advanced ultrasonic vibrations remove stubborn calculus, tartar, and bacterial plaque from teeth and beneath gum lines without damaging sensitive enamel.',
-      duration: '30 - 45 mins',
-      recovery: 'Instant freshness and clean breath'
-    },
-    'crown & bridges': {
-      title: 'Porcelain Crowns & Dental Bridges',
-      desc: 'Premium zirconia and ceramic crowns designed to reinforce damaged teeth or fill gaps with permanent, rock-solid, lifelike restorations.',
-      duration: '2 appointments',
-      recovery: 'Long-lasting 15+ years strength'
-    },
-    'dental veeners': {
-      title: 'Porcelain & Composite Dental Veneers',
-      desc: 'Ultra-thin, custom porcelain laminates sculpted to reshape, brighten, and perfect your front teeth for an unforgettable Hollywood smile.',
-      duration: '2 visits',
-      recovery: 'Immediate transformation'
-    },
-    'implant': {
-      title: 'Titanium Dental Implants',
-      desc: 'Gold-standard tooth replacement using medical-grade titanium anchors topped with handcrafted ceramic crowns. Replaces roots with permanent stability.',
-      duration: 'Multi-stage precision care',
-      recovery: 'Permanent tooth replacement'
-    },
-    'tooth extraction': {
-      title: 'Gentle Tooth Extraction',
-      desc: 'Safe, painless extraction of severely damaged or crowded teeth, focusing on alveolar bone preservation for future implants.',
-      duration: '20 - 30 mins',
-      recovery: '1 - 2 days'
-    },
-    'orthodontic dental care': {
-      title: 'Orthodontic Dental Care & Aligners',
-      desc: 'State-of-the-art clear aligners and modern brackets designed to straighten crooked teeth, fix bite issues, and align your jaw with maximum discretion.',
-      duration: 'Custom treatment plan',
-      recovery: 'Gradual, comfortable movement'
-    },
-    'dental intraoral camera': {
-      title: 'Digital Dental Intraoral Camera Exam',
-      desc: 'Ultra-high-definition digital photography inside your mouth. You see exactly what the doctor sees on chairside HD monitors in real-time.',
-      duration: 'Included in regular checkups',
-      recovery: 'Zero downtime'
-    }
-  };
 
   // Toast notification helper
   function showToast(message) {
@@ -91,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3200);
   }
 
-  // Open / Close Modals
+  // Generic Open / Close Modal helpers
   function openModal(modal) {
     if (!modal) return;
     modal.classList.add('active');
@@ -117,116 +44,115 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Trigger Service Explorer Modal
+  // Navigate to Dedicated Service Page
   const serviceTrigger = document.querySelector('[data-action="explore-services"]');
   if (serviceTrigger) {
     serviceTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      openServiceDetails('root canel');
+      // Let standard link navigation work, or smoothly redirect
+      window.location.href = '/service.html';
     });
   }
 
-  // Click on treatment list items
+  // Click on treatment list items -> Navigate directly to that treatment section on service.html
   const treatmentItems = document.querySelectorAll('.treatment-bullet-list li');
   treatmentItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const key = item.getAttribute('data-service') || item.textContent.replace('•', '').trim().toLowerCase();
-      openServiceDetails(key);
+    item.addEventListener('click', (e) => {
+      const link = item.querySelector('a');
+      const href = link ? link.getAttribute('href') : null;
+      const target = item.getAttribute('data-target') || item.getAttribute('data-service');
+      if (href) {
+        window.location.href = href;
+      } else if (target) {
+        window.location.href = `/service.html#${target}`;
+      }
     });
   });
 
-  function openServiceDetails(serviceKey) {
-    const data = serviceDetails[serviceKey] || {
-      title: 'Comprehensive Dental Treatment',
-      desc: 'Tailored dental care provided by certified BDS/MDS specialists using advanced dental technology.',
-      duration: '30 - 60 mins',
-      recovery: 'Immediate'
-    };
+  // Kinetic "Tip-Tap" Motion Engine for 'What We Serve' (PC Cursor & Mobile Touch Tracking)
+  const treatmentListEl = document.querySelector('.treatment-bullet-list');
+  if (treatmentListEl) {
+    let currentPopItem = null;
+    let settleTimer = null;
 
-    const sTitle = document.getElementById('serviceDetailTitle');
-    const sDesc = document.getElementById('serviceDetailDesc');
-    const sDuration = document.getElementById('serviceDetailDuration');
-    const sRecovery = document.getElementById('serviceDetailRecovery');
+    function activateTipTap(item) {
+      if (currentPopItem === item) return;
 
-    if (sTitle) sTitle.textContent = data.title;
-    if (sDesc) sDesc.textContent = data.desc;
-    if (sDuration) sDuration.textContent = data.duration;
-    if (sRecovery) sRecovery.textContent = data.recovery;
+      if (currentPopItem) {
+        const departing = currentPopItem;
+        departing.classList.remove('tip-tap-active', 'touch-pop');
+        departing.classList.add('tip-tap-settle');
+        setTimeout(() => {
+          departing.classList.remove('tip-tap-settle');
+        }, 300);
+      }
 
-    openModal(serviceModal);
+      currentPopItem = item;
+      if (currentPopItem) {
+        currentPopItem.classList.remove('tip-tap-settle');
+        currentPopItem.classList.add('tip-tap-active');
+      }
+    }
+
+    function clearTipTap() {
+      if (currentPopItem) {
+        const departing = currentPopItem;
+        departing.classList.remove('tip-tap-active', 'touch-pop');
+        departing.classList.add('tip-tap-settle');
+        setTimeout(() => {
+          departing.classList.remove('tip-tap-settle');
+        }, 300);
+        currentPopItem = null;
+      }
+    }
+
+    // PC: Cursor tracking over options
+    treatmentListEl.addEventListener('mousemove', (e) => {
+      const li = e.target.closest('.treatment-bullet-list li');
+      if (li) {
+        activateTipTap(li);
+      } else {
+        clearTipTap();
+      }
+    });
+
+    treatmentListEl.addEventListener('mouseleave', () => {
+      clearTipTap();
+    });
+
+    // Mobile: Finger tracking over options
+    treatmentListEl.addEventListener('touchstart', (e) => {
+      clearTimeout(settleTimer);
+      const touch = e.touches[0];
+      const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+      const li = targetEl ? targetEl.closest('.treatment-bullet-list li') : null;
+      if (li) activateTipTap(li);
+    }, { passive: true });
+
+    treatmentListEl.addEventListener('touchmove', (e) => {
+      clearTimeout(settleTimer);
+      const touch = e.touches[0];
+      const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+      const li = targetEl ? targetEl.closest('.treatment-bullet-list li') : null;
+      if (li) {
+        activateTipTap(li);
+      } else {
+        clearTipTap();
+      }
+    }, { passive: true });
+
+    treatmentListEl.addEventListener('touchend', () => {
+      settleTimer = setTimeout(clearTipTap, 320);
+    }, { passive: true });
+
+    treatmentListEl.addEventListener('touchcancel', clearTipTap, { passive: true });
   }
 
-  // Close buttons for modals
-  document.querySelectorAll('.modal-close-btn, [data-action="close-modal"]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal(bookingModal);
-      closeModal(serviceModal);
-    });
-  });
-
-  // Click outside modal card to close
-  window.addEventListener('click', (e) => {
-    if (e.target === bookingModal) closeModal(bookingModal);
-    if (e.target === serviceModal) closeModal(serviceModal);
-  });
-
-  // Keyboard Escape key to close
+  // Keyboard shortcut: Press 'b' to open appointment page if not in form input
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeModal(bookingModal);
-      closeModal(serviceModal);
-    }
-    // Press 'b' to open appointment page if not in form input
     if ((e.key === 'b' || e.key === 'B') && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
       window.location.href = '/appointment.html';
     }
   });
-
-  // Copy contact info to clipboard
-  const copyableItems = document.querySelectorAll('[data-copy]');
-  copyableItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const textToCopy = item.getAttribute('data-copy');
-      if (textToCopy && navigator.clipboard) {
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast(`Copied "${textToCopy}" to clipboard!`);
-        }).catch(() => {
-          showToast(`Contact: ${textToCopy}`);
-        });
-      }
-    });
-  });
-
-  // Handle Booking Form Submit
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(bookingForm);
-      const data = Object.fromEntries(formData.entries());
-
-      try {
-        const response = await fetch('/api/appointments', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        const result = await response.json();
-        if (result.success) {
-          closeModal(bookingModal);
-          bookingForm.reset();
-          showToast('Appointment Confirmed! We look forward to seeing your smile.');
-        } else {
-          showToast(result.message || 'Error scheduling appointment.');
-        }
-      } catch (err) {
-        // Offline / fallback simulation
-        closeModal(bookingModal);
-        bookingForm.reset();
-        showToast(`Thank you ${data.patientName || 'valued patient'}! Appointment booked for ${data.preferredDate || 'tomorrow'}.`);
-      }
-    });
-  }
 
   // Mobile navigation menu toggle
   const mobileNavToggle = document.getElementById('mobileNavToggle');
@@ -488,5 +414,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', syncMobileHeroHeader, { passive: true });
   syncMobileHeroHeader();
+
+  // Smooth scroll landing for incoming hash (e.g. from service.html 'back' button to #values)
+  if (window.location.hash) {
+    const targetElement = document.querySelector(window.location.hash);
+    if (targetElement) {
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+    }
+  }
 });
 
