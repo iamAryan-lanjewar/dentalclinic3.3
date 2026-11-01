@@ -20,3 +20,8 @@ Thumbs.db
 data/
 logs/
 
+# Build Output
+.next/
+dist/
+build/
+

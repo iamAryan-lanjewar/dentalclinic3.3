@@ -4,6 +4,7 @@
   "description": "Pixel-Perfect, Production-Ready Dental Clinic Web Application with High-End UX & SEO",
   "main": "server.js",
   "scripts": {
+    "build": "node build.js",
     "start": "node server.js",
     "dev": "node server.js"
   },
